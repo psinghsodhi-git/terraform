@@ -1,7 +1,7 @@
 #terraform main code for aws web server
 terraform {
   backend "local" {
-    path = "/etc/.aws/terraform.tfstate"
+    path = "D:/Terraform/aws/terraform.tfstate"
   }
 }
 
@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 data "template_file" "prefix" {
-  template = file("/etc/.aws/prefix")
+  template = file("D:/Terraform/aws/prefix")
 }
 
 resource "aws_key_pair" "webserver-kp" {
