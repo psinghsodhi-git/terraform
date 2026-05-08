@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 data "template_file" "prefix" {
-  template = file("D:/Terraform/aws/prefix")
+  template = file("D:/Terraform/aws/prefix.txt")
 }
 
 resource "aws_key_pair" "webserver-kp" {
